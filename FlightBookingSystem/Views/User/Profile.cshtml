@@ -1,0 +1,72 @@
+﻿@model FlightBookingSystem.Models.User
+
+@{
+    ViewBag.Title = "Profile";
+}
+
+<h2>Welcome, @Model.FirstName!</h2>
+
+<div class="row">
+    <div>
+        <h4>User Information</h4>
+        <table class="table">
+            <tr>
+                <td><strong>First Name:</strong></td>
+                <td>@Model.FirstName</td>
+            </tr>
+            <tr>
+                <td><strong>Last Name:</strong></td>
+                <td>@Model.LastName</td>
+            </tr>
+            <tr>
+                <td><strong>Email:</strong></td>
+                <td>@Model.Email</td>
+            </tr>
+
+        </table>
+    </div>
+    <div>
+        <h4>Bookings</h4>
+        @if (Model.Bookings != null && Model.Bookings.Any())
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Flight</th>
+                        <th>Departure Date</th>
+                        <th>Arrival Date</th>
+                        <th>No. of Tickets</th>
+                        <th>Cabin Class</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var booking in Model.Bookings)
+                    {
+                        <tr>
+                            <td>@booking.Id</td>
+                            <td>@booking.Flight.FlightNumber - @booking.Flight.DepartureCity to @booking.Flight.ArrivalCity</td>
+                            <td>@booking.Flight.ArrivalTime.ToString("dd MMM yyyy")</td>
+                            <td>@booking.Flight.DepartureTime.ToString("dd MMM yyyy")</td>
+                            <td>@booking.NoOfTicket</td>
+                            <td>@booking.CabinClass</td>
+                            
+                            <td>
+                                <a href="@Url.Action("CancelBooking", "User", new { id = booking.Id })" class="btn btn-danger"
+                                   onclick="return confirm('Are you sure you want to cancel this booking?');">Cancel</a>
+                            </td>
+                            
+
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No bookings found.</p>
+        }
+    </div>
+</div>

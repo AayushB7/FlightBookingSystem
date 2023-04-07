@@ -1,0 +1,78 @@
+﻿@*@{
+        ViewBag.Title = "Home Page";
+    }
+
+    <div class="jumbotron">
+        <h1>Welcome to  FlyIndia!</h1>
+        <p class="lead">Book your next flight with us...</p><br /><br />
+        <p><a href="@Url.Action("Search", "Flight")" class="btn btn-primary btn-lg">Search Flights</a></p>
+    </div>
+
+*@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="@Url.Action("Index", "Home")">FlyIndia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                &emsp;
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("About", "Home")">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Contact", "Home")">Contact Us</a>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Welcome to FlyIndia!</h1>
+            <p class="lead">Book your next flight with us...</p><br />
+            <form class="form-inline">
+                @*<div class="form-group">
+                        <input type="text" class="form-control" id="origin" placeholder="From">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="destination" placeholder="To">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="departure-date" placeholder="Departure Date">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="return-date" placeholder="Return Date">
+                    </div>*@
+                <p><a href="@Url.Action("Search", "Flight")" class="btn btn-primary btn-lg">Search Flights</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer bg-light mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">©2023 FlyIndia. All rights reserved.</span>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    @*<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"></script>*@
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+

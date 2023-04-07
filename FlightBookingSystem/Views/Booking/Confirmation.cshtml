@@ -1,0 +1,47 @@
+﻿@model FlightBookingSystem.Models.Booking
+
+<h2>Booking Confirmation</h2>
+
+<p>Thank you for your booking!</p>
+
+<table class="table">
+    <tr>
+        <td><strong>Booking ID:</strong></td>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <td><strong>Passenger Name:</strong></td>
+        <td>@Model.PassengerName</td>
+    </tr>
+    <tr>
+        <td><strong>Flight Number:</strong></td>
+        <td>@Model.Flight.FlightNumber</td>
+    </tr>
+    <tr>
+        <td><strong>From:</strong></td>
+        <td>@Model.Flight.DepartureCity</td>
+    </tr>
+    <tr>
+        <td><strong>To:</strong></td>
+        <td>@Model.Flight.ArrivalCity</td>
+    </tr>
+    <tr>
+        <td><strong>Departure Time:</strong></td>
+        <td>@Model.Flight.DepartureTime.ToString("dd/MM/yyyy hh:mm tt")</td>
+    </tr>
+    <tr>
+        <td><strong>Arrival Time:</strong></td>
+        <td>@Model.Flight.ArrivalTime.ToString("dd/MM/yyyy hh:mm tt")</td>
+    </tr>
+    <tr>
+        <td><strong>Price:</strong></td>
+        <td>@Model.Price.ToString("C")</td>
+    </tr>
+    <tr>
+        @Html.ActionLink("Back to Home Page", "Index", "Home", null, new { @class = "btn btn-primary" })
+       
+
+<tr>
+        </tr>
+
+</table>
