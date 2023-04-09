@@ -8,5 +8,5 @@ This website is created by a group of 3 members : Yash Khandelwal, Aayush Bahuru
 Contact Us :
 
 Yash Khandelwal - yash-mukesh.khandelwal@capgemini.com  
-Aayush Bahurupi - aayush.bahurupi@capgemini.com  
+Aayush Bahurupi - [aayush.bahurupi@capgemini.com  ](https://www.linkedin.com/in/aayush-bahurupi-26ab8420b/)
 Sanchi Kamble - sanchi.kamble@capgemini.com
